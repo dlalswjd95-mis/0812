@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>업로드폼</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .wrapper{
+            width:500px;
+            border:3px solid #78ff00;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            margin: auto;
+            text-align: center;
+            padding: 15px;
+        }
+        input{
+            width: 95%
+        }
+    </style>
+    <script>
+
+        function regist(){
+            form1.method="post";
+            //프로그래밍으로 multipart를 명시할때는 form1.encoding이라는 것을 주의!!!
+            form1.encoding="multipart/form-data";
+            form1.action = "/upload";
+            form1.submit();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form name="form1" method="post" enctype="multipart/form-data">
+            <input type="text" name="msg">
+            <input type="file" name="myFile">
+        </form>
+        <button onClick="regist()">전송</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 모드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body{margin:0;padding:0;}
+        a{text-decoration: none;}
+        .wrapper{
+            width:100%;
+        }
+        .header{
+            background: green;
+            width: 100%;
+            overflow: hidden;
+        }
+        .header h2{
+            float:left;
+        }
+        .header div{
+            float:right;
+            padding: 20px 20px 20px 0px;
+        }
+        .nav a{
+            display: block;
+            background: black;
+            color: #ffffff;
+            float:left;
+            width:25%;
+            text-align: center;
+            padding: 10px 0px;
+        }
+        .nav a:hover{
+            background: #a4ff8a;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h2>F-Deveoloper</h2>
+            <div><%=id%>님 <a href="/logout">로그아웃</a></div>
+        </div>
+        <div class="nav">
+            <a href="#">상품관리</a>
+            <a href="#">고객관리</a>
+            <a href="#">게시판관리</a>
+            <a href="#">상점관리</a>
+        </div>
+        <div class="aside">
+
+        </div>
+        <div class="section">
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>
